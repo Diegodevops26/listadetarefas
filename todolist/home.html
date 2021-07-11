@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_br" > 
+    <head>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+<div id="myDIV" class="header">
+  <h2>Lista de Tarefas.Dev</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+<ul id="myUL">
+  <li class=""></li>
+  <li class=""></li>
+  <li class=""></li>
+  <li class =""></li>
+  <li class=""></li>
+  <li class=""></li>
+  <li class=""></li>
+</ul>
+<form id="frmDate">
+    <label for="data">Selecione uma data:</label>
+    <input type="datetime-local" id="data" name="data">
+    <input type="submit" value="Exibir data selecionada">
+</form>
+<h2 id="resultado"></h2>
+<script>
+  document.getElementById("frmDate").onsubmit = function () {
+        let frmData = document.getElementById('frmDate').elements;
+        document.getElementById("resultado").innerHTML = frmData['data'].value;  
+        return false;
+  }        
+</script>
+<script src="/script.js">
+</script>
+</html>
+<footer class="text-center" style="background-color:#2c3e50;padding:0px; margin:0px">
+    <p style="margin:0px;padding: top 5px;padding: bottom 5px;color:white !important">Copyright 2021 Diego Santos®
+    </p>
+</footer>
